@@ -16,8 +16,6 @@
 
 Portfolio personnel en thème sombre (noir, orange, violet) qui présente mon profil, mes compétences, mon parcours, mes projets et un formulaire de contact.
 
-![Aperçu du portfolio](images/apercu.png)
-
 ## Sections
 
 | Section | Contenu |
@@ -50,7 +48,6 @@ Aucun framework ni dépendance : le site fonctionne sans installation ni étape 
 ## Structure du projet
 
 ```
-portfolio-ladji-karamoko/
 ├── index.html      # Structure et contenu du site
 ├── style.css       # Thème, mise en page, animations, responsive
 ├── script.js       # Menu mobile, effet de frappe, animations au scroll, formulaire
@@ -61,26 +58,12 @@ portfolio-ladji-karamoko/
 
 ## Lancer le projet en local
 
-```bash
-git clone https://github.com/karmokolassina22/karmokolassina22.github.io.git
-cd karmokolassina22.github.io
-```
-
-Ouvre ensuite `index.html` dans ton navigateur, ou utilise l'extension **Live Server** de VS Code.
+Ouvrir `index.html` dans un navigateur, ou utiliser l'extension **Live Server** de VS Code.
 
 ## Déploiement
 
-### GitHub Pages
-
-Le site est publié automatiquement à chaque `git push` sur la branche `main` du dépôt `karmokolassina22.github.io`.
-
-> Sur GitHub Pages, le formulaire de contact ne peut pas envoyer de messages. Il faut passer par Netlify ou un service comme Formspree.
-
-### Netlify (formulaire de contact fonctionnel)
-
-1. Aller sur https://app.netlify.com/drop
-2. Glisser-déposer le dossier du projet
-3. Les messages reçus apparaissent dans l'onglet **Forms** du site Netlify
+- **GitHub Pages** : le site est publié à chaque `git push` sur la branche `main`. Le formulaire de contact n'y envoie pas de messages.
+- **Netlify** : glisser-déposer le dossier sur https://app.netlify.com/drop. Le formulaire fonctionne, et les messages apparaissent dans l'onglet **Forms**.
 
 ## Contact
 
