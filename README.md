@@ -3,7 +3,7 @@
 > Ingénieur DevOps / Cloud en formation, MSc Pro Cloud à **Epitech Paris**.
 > À la recherche d'une **alternance de 3 ans à partir de janvier 2027** (4 semaines en entreprise / 2 semaines à l'école).
 
-🔗 **Site en ligne :** https://karmokolassina22.github.io
+🔗 **Site en ligne :** https://ladji.netlify.app
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -18,15 +18,15 @@ Portfolio personnel en thème sombre (noir, orange, violet) qui présente mon pr
 
 ## Sections
 
-| Section | Contenu |
-|---|---|
-| **Accueil** | Présentation, accès au CV, disponibilité pour l'alternance |
-| **À propos** | Formation, titre RNCP 7 visé, localisation, rythme d'alternance |
-| **Compétences** | Cloud, DevOps, réseau et sécurité, systèmes, langages, web et bases de données |
-| **Parcours** | Expériences professionnelles et formation sous forme de frise |
-| **Projets** | Kubernetes (GKE), audit de sécurité Linux, chat temps réel, plateforme full stack, CI/CD, scripts Python |
-| **Soft skills** | Savoir-être, langues et loisirs |
-| **Contact** | Coordonnées et formulaire de contact |
+| Section         | Contenu                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------- |
+| **Accueil**     | Présentation, accès au CV, disponibilité pour l'alternance                                               |
+| **À propos**    | Formation, titre RNCP 7 visé, localisation, rythme d'alternance                                          |
+| **Compétences** | Cloud, DevOps, réseau et sécurité, systèmes, langages, web et bases de données                           |
+| **Parcours**    | Expériences professionnelles et formation sous forme de frise                                            |
+| **Projets**     | Kubernetes (GKE), audit de sécurité Linux, chat temps réel, plateforme full stack, CI/CD, scripts Python |
+| **Soft skills** | Savoir-être, langues et loisirs                                                                          |
+| **Contact**     | Coordonnées et formulaire de contact                                                                     |
 
 ## Fonctionnalités
 
