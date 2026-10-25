@@ -1,6 +1,10 @@
-# Publie automatiquement le site sur GitHub Pages à chaque push sur main.
-# Le site est statique (HTML/CSS/JS) : aucune étape de build, on envoie le dossier tel quel.
-name: Déploiement GitHub Pages
+# Publie automatiquement le site sur Netlify (https://ladji.netlify.app) à chaque push sur main.
+# L'organisation GitHub d'Epitech n'autorise pas l'application Netlify : c'est donc GitHub Actions
+# qui envoie le site, avec la CLI Netlify.
+# Secrets à créer dans le dépôt (Settings → Secrets and variables → Actions) :
+#   NETLIFY_AUTH_TOKEN : jeton d'accès personnel Netlify
+#   NETLIFY_SITE_ID    : identifiant du site (Project configuration → Project ID)
+name: Déploiement Netlify
 
 on:
   push:
@@ -9,25 +13,29 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Un seul déploiement à la fois ; un nouveau push remplace celui en attente
 concurrency:
-  group: pages
+  group: netlify
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+
+      - uses: actions/setup-node@v4
         with:
-          path: .
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          node-version: 20
+
+      # Site statique : on copie les fichiers du site, sans .git, .github ni README
+      - name: Préparer les fichiers
+        run: rsync -a --exclude='.git' --exclude='.github' --exclude='_site' --exclude='README.md' ./ _site/
+
+      - name: Publier sur Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: npx --yes netlify-cli@17 deploy --dir=_site --prod --message "$COMMIT_MSG"
