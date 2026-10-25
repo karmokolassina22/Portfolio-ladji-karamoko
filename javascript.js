@@ -8,7 +8,12 @@ const mnav = document.getElementById('mnav');
 function showPage(id) {
   if (!document.getElementById(id)) id = 'accueil';
   pages.forEach(p => p.classList.toggle('active', p.id === id));
-  document.querySelectorAll('.nav a.l').forEach(l => l.classList.toggle('on', l.dataset.page === id));
+  // lien actif dans le menu ordinateur et dans le menu mobile
+  document.querySelectorAll('.nav a.l, #mnav a').forEach(l => {
+    const on = l.dataset.page === id;
+    l.classList.toggle('on', on);
+    if (on) l.setAttribute('aria-current', 'page'); else l.removeAttribute('aria-current');
+  });
   window.scrollTo({ top: 0 });
   // ferme le menu mobile
   burger.setAttribute('aria-expanded', 'false');
@@ -75,7 +80,11 @@ document.querySelectorAll('.filter').forEach(btn => {
   });
 });
 
-// ===================== FORMULAIRE (Netlify Forms) =====================
+// ===================== FORMULAIRE (Web3Forms) =====================
+// Clé gratuite à obtenir sur https://web3forms.com : les messages arrivent dans votre boîte mail.
+// Cette clé est faite pour être publique, elle peut rester dans le code.
+const WEB3FORMS_KEY = 'COLLEZ-VOTRE-CLE-ICI';
+
 (function () {
   const f = document.getElementById('contact-form');
   const st = document.getElementById('form-status');
@@ -88,13 +97,21 @@ document.querySelectorAll('.filter').forEach(btn => {
       st.textContent = 'Renseignez votre nom, un email valide et un message.';
       return;
     }
+    // champ piège rempli = robot : on fait semblant que tout s'est bien passé
+    if (f['bot-field'].value) { st.className = 'ok'; st.textContent = 'Merci ! Votre message a bien été envoyé.'; f.reset(); return; }
     st.textContent = 'Envoi en cours…';
-    fetch('/', {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(f)).toString()
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: 'Nouveau message depuis le portfolio',
+        from_name: 'Portfolio Ladji Karamoko',
+        name, email: mail, message: msg
+      })
     })
-      .then(r => { if (!r.ok) throw r.status; st.className = 'ok'; st.textContent = 'Merci ! Votre message a bien été envoyé.'; f.reset(); })
+      .then(r => r.json())
+      .then(res => { if (!res.success) throw res.message; st.className = 'ok'; st.textContent = 'Merci ! Votre message a bien été envoyé.'; f.reset(); })
       .catch(err => { console.error('Envoi du formulaire échoué :', err); st.className = 'err'; st.textContent = "L'envoi a échoué. Écrivez-moi à ladji.karamoko@epitech.eu."; });
   });
 })();
