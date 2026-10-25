@@ -1,9 +1,9 @@
 # Portfolio · Ladji Karamoko
 
+🔗 Site en ligne : https://ladji.netlify.app
+
 > Ingénieur DevOps / Cloud en formation, MSc Pro Cloud à **Epitech Paris**.
 > À la recherche d'une **alternance de 3 ans à partir de janvier 2027** (4 semaines en entreprise / 2 semaines à l'école).
-
-🔗 **Site en ligne :** https://ladji.netlify.app
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -14,45 +14,45 @@
 
 ## Aperçu
 
-Portfolio personnel en thème sombre (noir, orange, violet) qui présente mon profil, mes compétences, mon parcours, mes projets et un formulaire de contact.
+Portfolio personnel en thème sombre (noir, orange, violet). Le site est découpé en **pages** : une seule est affichée à la fois, et le menu permet de passer de l'une à l'autre. L'adresse change selon la page (`#about`, `#projects`…), ce qui permet de partager un lien direct et d'utiliser le bouton « retour » du navigateur.
 
-## Sections
+## Pages
 
-| Section         | Contenu                                                                                                  |
-| --------------- | -------------------------------------------------------------------------------------------------------- |
-| **Accueil**     | Présentation, accès au CV, disponibilité pour l'alternance                                               |
-| **À propos**    | Formation, titre RNCP 7 visé, localisation, rythme d'alternance                                          |
-| **Compétences** | Cloud, DevOps, réseau et sécurité, systèmes, langages, web et bases de données                           |
-| **Parcours**    | Expériences professionnelles et formation sous forme de frise                                            |
-| **Projets**     | Kubernetes (GKE), audit de sécurité Linux, chat temps réel, plateforme full stack, CI/CD, scripts Python |
-| **Soft skills** | Savoir-être, langues et loisirs                                                                          |
-| **Contact**     | Coordonnées et formulaire de contact                                                                     |
+| Page                 | Ancre        | Contenu                                                                                          |
+| -------------------- | ------------ | ------------------------------------------------------------------------------------------------ |
+| **Accueil**          | `#accueil`   | Phrase d'accroche, photo, accès au CV (PDF), bouton vers le formulaire de contact                |
+| **Qui suis-je ?**    | `#about`     | Présentation, formation, rythme d'alternance, disponibilité                                      |
+| **Mon parcours**     | `#parcours`  | Études, expériences professionnelles et hors école (VivaTech…), progression de l'année, outils   |
+| **Compétences**      | `#skills`    | Cloud, DevOps, réseau et sécurité, systèmes, langages, web et bases de données                   |
+| **Mes réalisations** | `#projects`  | Projets Epitech et personnels : contexte, objectif, technologies, liens ; filtres par catégorie  |
+| **Soft skills**      | `#soft`      | Savoir-être, langues et loisirs                                                                  |
+| **Contact**          | `#contact`   | Coordonnées, réseaux et formulaire de contact                                                    |
 
 ## Fonctionnalités
 
-- **Responsive** : s'adapte à l'ordinateur, la tablette et le mobile, avec un menu burger sur petit écran
-- **Animations** : apparition du haut de page au chargement, effet de frappe de commandes (`kubectl`, `docker`, `ansible`…), sections qui apparaissent au défilement
-- **Navigation** : lien actif selon la section affichée, barre de progression de lecture, bouton de retour en haut
-- **Formulaire de contact** : validation des champs, protection anti-spam (honeypot), compatible Netlify Forms
-- **Accessibilité** : navigation au clavier, focus visible, animations désactivées si l'utilisateur a choisi de réduire les animations dans son système
+- **Responsive** : ordinateur, tablette et mobile, avec un menu burger sur petit écran
+- **Navigation** : la page en cours est mise en évidence dans le menu (ordinateur et mobile)
+- **Animations** : apparition de l'accueil, effet de frappe de commandes (`kubectl`, `docker`, `ansible`…)
+- **Formulaire de contact** : validation des champs, champ piège anti-spam, envoi par email via [Web3Forms](https://web3forms.com)
+- **Accessibilité** : textes alternatifs, titres hiérarchisés, navigation au clavier, focus visible, animations désactivées si l'utilisateur a choisi de les réduire dans son système
 
 ## Technologies
 
-- **HTML5** : structure sémantique (`header`, `main`, `section`, `article`)
+- **HTML5** : structure sémantique (`header`, `nav`, `main`, `section`, `article`, `footer`)
 - **CSS3** : variables CSS, Grid, Flexbox, animations `@keyframes`, media queries
-- **JavaScript (vanilla)** : `IntersectionObserver`, Clipboard API, Fetch API
-- **Polices** : Urbanist et Poppins (Google Fonts)
+- **JavaScript (vanilla)** : navigation entre les pages, onglets, filtres, Fetch API pour le formulaire
 
-Aucun framework ni dépendance : le site fonctionne sans installation ni étape de build.
+Aucun framework ni étape de build : le site fonctionne tel quel.
 
 ## Structure du projet
 
 ```
-├── index.html      # Structure et contenu du site
-├── style.css       # Thème, mise en page, animations, responsive
-├── script.js       # Menu mobile, effet de frappe, animations au scroll, formulaire
-├── images/
-│   └── ladji.jpeg  # Photo de profil
+├── image/
+│   └── ladji.jpeg           # Photo de profil
+├── CV-LADJI-KARAMOKO.pdf    # CV téléchargeable depuis le site
+├── index.html               # Structure et contenu de toutes les pages
+├── style.css                # Thème, mise en page, animations, responsive
+├── javascript.js            # Navigation, menu mobile, effet de frappe, onglets, filtres, formulaire
 └── README.md
 ```
 
@@ -62,13 +62,38 @@ Ouvrir `index.html` dans un navigateur, ou utiliser l'extension **Live Server** 
 
 ## Déploiement
 
-- **GitHub Pages** : le site est publié à chaque `git push` sur la branche `main`. Le formulaire de contact n'y envoie pas de messages.
-- **Netlify** : glisser-déposer le dossier sur https://app.netlify.com/drop. Le formulaire fonctionne, et les messages apparaissent dans l'onglet **Forms**.
+Le site est hébergé sur **Netlify** (https://ladji.netlify.app), relié à ce dépôt GitHub.
+
+La publication est **automatique** : à chaque `git push` sur la branche `main`, Netlify récupère le code et met le site en ligne. Aucune étape de build : les fichiers sont publiés tels quels.
+
+Réglages Netlify (**Site configuration → Build & deploy**) :
+
+| Réglage           | Valeur  |
+| ----------------- | ------- |
+| Branche déployée  | `main`  |
+| Build command     | *(vide)* |
+| Publish directory | `.`     |
+
+Le suivi des déploiements se fait dans l'onglet **Deploys** du site sur Netlify.
+
+Netlify a été choisi plutôt que GitHub Pages pour disposer d'une adresse courte et professionnelle, à mettre sur le CV.
+
+## Formulaire de contact
+
+Le formulaire est envoyé par [Web3Forms](https://web3forms.com) directement depuis le navigateur (pas de backend) : les messages arrivent par email. La clé d'accès se trouve en haut de la partie formulaire de `javascript.js`.
+
+## Crédits
+
+- **Polices** : [Urbanist](https://fonts.google.com/specimen/Urbanist) et [Poppins](https://fonts.google.com/specimen/Poppins), Google Fonts, licence SIL Open Font License
+- **Icônes** : [Font Awesome Free](https://fontawesome.com), licence CC BY 4.0
+- **Design** : inspiré du portfolio de Félix-Gautier Akoto Yao
+- **Photo** : photo personnelle
 
 ## Contact
 
 - **Email :** ladji.karamoko@epitech.eu
 - **LinkedIn :** [Ladji Karamoko](https://www.linkedin.com/in/ladjikaramokoa30532319)
+- **GitHub :** [karmokolassina22](https://github.com/karmokolassina22)
 - **Localisation :** Aubervilliers (93300), Île-de-France
 
 ---
