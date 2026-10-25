@@ -13,28 +13,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="progress" id="progress"></div>
-
-  <!---------------------------- NAVIGATION ---------------------------->
+  <!-- ==================== NAVIGATION ==================== -->
   <header class="nav">
     <div class="wrap">
       <nav class="nav-in" aria-label="Navigation principale">
         <ul>
-          <li><a class="l on" href="#about">Qui suis-je ?</a></li>
-          <li><a class="l" href="#parcours">Mon parcours</a></li>
-          <li><a class="l" href="#skills">Compétences</a></li>
+          <li><a class="l" href="#about" data-page="about">Qui suis-je ?</a></li>
+          <li><a class="l" href="#parcours" data-page="parcours">Mon parcours</a></li>
+          <li><a class="l" href="#skills" data-page="skills">Compétences</a></li>
         </ul>
 
-        <a class="logo" href="#top" aria-label="Accueil">l<b>k</b><small>OPS</small></a>
+        <a class="logo" href="#accueil" data-page="accueil" aria-label="Accueil">l<b>k</b><small>OPS</small></a>
 
         <ul class="r">
-          <li><a class="l" href="#projects">Mes réalisations</a></li>
-          <li><a class="l" href="#soft">Soft skills</a></li>
-          <li><a class="l" href="#contact">Contact</a></li>
+          <li><a class="l" href="#projects" data-page="projects">Mes réalisations</a></li>
+          <li><a class="l" href="#soft" data-page="soft">Soft skills</a></li>
+          <li><a class="l" href="#contact" data-page="contact">Contact</a></li>
         </ul>
 
         <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav">
@@ -43,62 +42,63 @@
       </nav>
 
       <div class="mnav" id="mnav" hidden>
-        <a href="#about">Qui suis-je ?</a>
-        <a href="#skills">Compétences</a>
-        <a href="#parcours">Mon parcours</a>
-        <a href="#projects">Mes réalisations</a>
-        <a href="#soft">Soft skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#accueil" data-page="accueil">Accueil</a>
+        <a href="#about" data-page="about">Qui suis-je ?</a>
+        <a href="#parcours" data-page="parcours">Mon parcours</a>
+        <a href="#skills" data-page="skills">Compétences</a>
+        <a href="#projects" data-page="projects">Mes réalisations</a>
+        <a href="#soft" data-page="soft">Soft skills</a>
+        <a href="#contact" data-page="contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <main id="top">
+  <main>
 
-    <!---------------------------- ACCUEIL ------------------------->
-    <div class="wrap hero">
-      <span class="hello">Hello! <span class="hand">👋</span></span>
+    <!-- ==================== ACCUEIL ==================== -->
+    <section class="page hero-page" id="accueil">
+      <div class="wrap hero">
+        <span class="hello">Hello! <span class="hand">👋</span></span>
 
-      <h1>Je suis <span class="o">Ladji Karamoko</span>, Ingénieur DevOps / Cloud en formation</h1>
+        <h1>Je suis <span class="o">Ladji Karamoko</span>, Ingénieur DevOps / Cloud en formation</h1>
 
-      <p class="typed" aria-hidden="true">$ <b id="tw"></b><i class="caret"></i></p>
+        <p class="typed" aria-hidden="true">$ <b id="tw"></b><i class="caret"></i></p>
 
-      <div class="stage">
-        <p class="quote">
-          <strong>Ingénieur DevOps / Cloud</strong> en formation, étudiant en <strong>Pré-MSc → MSc Pro Cloud</strong> à Epitech Paris.
-          J'automatise des infrastructures et je déploie des applications sur Kubernetes.
-        </p>
+        <div class="stage">
+          <p class="quote">
+            <strong>Ingénieur DevOps / Cloud</strong> en formation, étudiant en <strong>Pré-MSc → MSc Pro Cloud</strong> à Epitech Paris.
+            J'automatise des infrastructures et je déploie des applications sur Kubernetes.
+          </p>
 
-        <div class="arc">
-          <div class="orbit" aria-hidden="true"></div>
-          <div class="avatar">
-            <img src="image/ladji.jpeg" alt="Ladji Karamoko">
+          <div class="arc">
+            <div class="orbit" aria-hidden="true"></div>
+            <div class="avatar">
+              <img src="image/ladji.jpeg" alt="Ladji Karamoko">
+            </div>
+            <div class="hero-cta">
+              <a class="btn o" href="CV-LADJI-KARAMOKO.pdf" target="_blank" rel="noopener">Mon CV ↗</a>
+              <a class="btn g" href="#contact" data-page="contact" data-form>Engagez-moi</a>
+            </div>
           </div>
-          <div class="hero-cta">
-            <a class="btn o" href="CV-LADJI-KARAMOKO.pdf" target="_blank" rel="noopener">Mon CV ↗</a>
-            <a class="btn g" href="#contact">Engagez-moi</a>
-          </div>
-        </div>
 
-        <div class="stat">
-          <div class="stars">★★★★★</div>
-          <b>3 ans</b>
-          <span>d'alternance dès<br>janvier 2027</span>
+          <div class="stat">
+            <div class="stars">★★★★★</div>
+            <b>3 ans</b>
+            <span>d'alternance dès<br>janvier 2027</span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!----------------------- À PROPOS ----------------------------->
+    <!-- ==================== QUI SUIS-JE ==================== -->
+    <section class="page hero-page" id="about">
+      <div class="wrap hero about-hero">
+        <span class="hello">À propos <span class="hand">🙋🏾‍♂️</span></span>
 
-    <section class="block alt" id="about">
-      <div class="wrap">
-        <div class="rv head">
-          <span class="kicker">Qui suis-je ?</span>
-          <h2>À <span class="o">propos</span> de moi</h2>
-        </div>
+        <h2>Qui <span class="o">suis-je ?</span></h2>
 
-        <div class="about">
-          <div class="rv card txt">
+        <div class="stage">
+          <div class="quote">
             <p>
               Étudiant en <strong>MSc Pro Cloud à Epitech Paris</strong>, je prépare le titre
               <strong>Architecte de Systèmes d'Information (RNCP niveau 7, Bac +5)</strong>.
@@ -116,334 +116,307 @@
             </p>
           </div>
 
-          <div class="rv card">
-            <dl class="facts">
-              <div><dt>Formation</dt><dd>MSc Pro Cloud · Epitech</dd></div>
-              <div><dt>Titre visé</dt><dd>RNCP 7 · Bac +5</dd></div>
-              <div><dt>Recherche</dt><dd>Alternance 3 ans</dd></div>
-              <div><dt>Début</dt><dd>Janvier 2027</dd></div>
-              <div><dt>Rythme</dt><dd>4 sem. entreprise / 2 sem. école</dd></div>
-              <div><dt>Localisation</dt><dd>Aubervilliers (93)</dd></div>
-            </dl>
-            <div class="avail">
-              <span class="pulse"></span>Disponible pour une alternance DevOps, cloud ou SysAdmin
+          <div class="arc">
+            <div class="orbit" aria-hidden="true"></div>
+            <div class="avatar">
+              <img src="image/ladji.jpeg" alt="Ladji Karamoko">
+            </div>
+            <div class="hero-cta">
+              <a class="btn o" href="CV-LADJI-KARAMOKO.pdf" target="_blank" rel="noopener">Mon CV ↗</a>
+              <a class="btn g" href="#contact" data-page="contact" data-form>Engagez-moi</a>
             </div>
           </div>
+
+          <dl class="stat facts">
+            <div><dt>Formation</dt><dd>MSc Pro Cloud · Epitech</dd></div>
+            <div><dt>Titre visé</dt><dd>RNCP 7 · Bac +5</dd></div>
+            <div><dt>Début</dt><dd>Janvier 2027</dd></div>
+            <div><dt>Rythme</dt><dd>4 sem. entreprise / 2 sem. école</dd></div>
+            <div><dt>Localisation</dt><dd>Aubervilliers (93)</dd></div>
+            <div><dt>Statut</dt><dd class="avail"><span class="pulse"></span>Disponible</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!------------------------ COMPÉTENCES --------------------------->
-    <section class="block" id="skills">
+    <!-- ==================== MON PARCOURS ==================== -->
+    <section class="page" id="parcours">
       <div class="wrap">
-        <div class="rv head">
-          <span class="kicker">Compétences</span>
-          <h2>Ma <span class="o">stack</span> technique</h2>
+        <h2 class="title">Mon <span class="o">Parcours</span></h2>
+
+        <div class="tabs" role="tablist">
+          <button class="tab on" role="tab" aria-selected="true" data-tab="etudes">Mes Études &amp; Formations</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="experiences">Mes Expériences Professionnelles</button>
         </div>
 
-        <div class="skills">
-          <div class="rv card skill">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/>
-              </svg>
+        <!-- Études -->
+        <div class="board" id="tab-etudes">
+          <div class="line">
+            <div class="where">
+              <h4>Epitech Paris <span class="now">En cours</span></h4>
+              <span>2026 - Oct. 2029</span>
             </div>
-            <h3>Cloud &amp; orchestration</h3>
-            <div class="chips">
-              <span class="chip k">Kubernetes</span>
-              <span class="chip k">Google Cloud / GKE</span>
-              <span class="chip">Traefik</span>
-              <span class="chip">cAdvisor</span>
+            <div class="what">
+              <h4>MSc Pro Cloud</h4>
+              <p>Titre <strong>Architecte de Systèmes d'Information (RNCP niveau 7, Bac +5)</strong>. Parcours Pré-MSc → MSc Pro Cloud.</p>
             </div>
           </div>
-
-          <div class="rv card skill">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12a9 9 0 1 1-3-6.7L21 8"/>
-                <path d="M21 3v5h-5"/>
-              </svg>
+          <div class="line">
+            <div class="where">
+              <h4>EDC Paris Business School</h4>
+              <span>2024 - 2025</span>
             </div>
-            <h3>DevOps &amp; automatisation</h3>
-            <div class="chips">
-              <span class="chip k">Docker</span>
-              <span class="chip k">Git / GitHub</span>
-              <span class="chip">Ansible</span>
-              <span class="chip">Jenkins</span>
-              <span class="chip">CI/CD</span>
+            <div class="what">
+              <h4>Bachelor 1re et 2e année</h4>
+              <ul>
+                <li>Gestion de projet</li>
+                <li>Entrepreneuriat</li>
+                <li>Communication professionnelle</li>
+              </ul>
             </div>
           </div>
-
-          <div class="rv card skill">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
+          <div class="line">
+            <div class="where">
+              <h4>École de Spécialité MultiMédia · Abidjan</h4>
+              <span>Déc. 2019 - Août 2021</span>
             </div>
-            <h3>Réseau &amp; sécurité</h3>
-            <div class="chips">
-              <span class="chip k">Adressage IP</span>
-              <span class="chip">OpenVPN</span>
-              <span class="chip">Nmap</span>
-              <span class="chip">ffuf</span>
-              <span class="chip">Pentest</span>
+            <div class="what">
+              <h4>BTS</h4>
+              <ul>
+                <li>Développement logiciel et web</li>
+                <li>Réseaux et systèmes</li>
+                <li>Multimédia</li>
+              </ul>
             </div>
           </div>
-
-          <div class="rv card skill">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <path d="M8 21h8M12 17v4M6 8l3 2-3 2M11 12h4"/>
-              </svg>
+          <div class="line">
+            <div class="where">
+              <h4>Collège Sainte Foi · Abidjan</h4>
+              <span>2018 - 2019</span>
             </div>
-            <h3>Systèmes</h3>
-            <div class="chips">
-              <span class="chip k">Linux / Ubuntu</span>
-              <span class="chip">WSL</span>
-              <span class="chip">Windows</span>
-            </div>
-          </div>
-
-          <div class="rv card skill">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>
-              </svg>
-            </div>
-            <h3>Langages</h3>
-            <div class="chips">
-              <span class="chip k">Python</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">Java</span>
-              <span class="chip">Rust</span>
-            </div>
-          </div>
-
-          <div class="rv card skill">
-            <div class="ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/>
-              </svg>
-            </div>
-            <h3>Web &amp; bases de données</h3>
-            <div class="chips">
-              <span class="chip k">HTML/CSS</span>
-              <span class="chip k">Tailwind CSS</span>
-              <span class="chip">React</span>
-              <span class="chip">WordPress</span>
-              <span class="chip">WebSocket</span>
-              <span class="chip">SQLite3</span>
-              <span class="chip">PostgreSQL</span>
-              <span class="chip">MongoDB</span>
+            <div class="what">
+              <h4>Baccalauréat scientifique</h4>
+              <p>Enseignement général, filière scientifique.</p>
             </div>
           </div>
         </div>
 
-        <div class="rv legend">
+        <!-- Expériences -->
+        <div class="board" id="tab-experiences" hidden>
+          <div class="line">
+            <div class="where">
+              <h4>VivaTech · Paris</h4>
+              <span>Juin 2026 · 1 mois</span>
+            </div>
+            <div class="what">
+              <h4>Guide bénévole</h4>
+              <ul>
+                <li><strong>Accueil et orientation</strong> des visiteurs sur le salon</li>
+                <li>Identification des exposants selon les besoins des visiteurs et redirection vers les stands correspondants</li>
+                <li>Maîtrise de la carte du salon pour optimiser les parcours visiteurs</li>
+              </ul>
+            </div>
+          </div>
+          <div class="line">
+            <div class="where">
+              <h4>Sweet Bazar Company · Paris</h4>
+              <span>Juin - Août 2024 · 2 mois</span>
+            </div>
+            <div class="what">
+              <h4>Employé libre-service</h4>
+              <ul>
+                <li>Accueil et installation des clients</li>
+                <li>Prise de commandes et service en table</li>
+                <li><strong>Encaissement et gestion de la caisse</strong></li>
+                <li>Conseil client et vente de produits</li>
+              </ul>
+            </div>
+          </div>
+          <div class="line">
+            <div class="where">
+              <h4>Coursier Médical · Abidjan</h4>
+              <span>Oct. 2021 - Janv. 2022 · 3 mois</span>
+            </div>
+            <div class="what">
+              <h4>Développeur WordPress</h4>
+              <ul>
+                <li>Intégration et mise en page de contenus (pages coursiers, facturation)</li>
+                <li>Optimisation des performances : <strong>temps de chargement réduit de 30 %</strong> (compression d'images, mise en cache)</li>
+                <li>Analyse des besoins clients et résolution des demandes techniques avant mise en production</li>
+                <li>Maintenance évolutive et corrective du site</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subtitle">Mes <span class="o">Compétences</span></h3>
+        <p class="sublead">Les outils que j'utilise au quotidien en DevOps, cloud et réseau.</p>
+        <div class="pills">
+          <span class="pill"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</span>
+          <span class="pill"><i class="fa-brands fa-google"></i> Google Cloud</span>
+          <span class="pill"><i class="fa-brands fa-docker"></i> Docker</span>
+          <span class="pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="pill"><i class="fa-solid fa-gears"></i> Ansible</span>
+          <span class="pill"><i class="fa-brands fa-jenkins"></i> Jenkins</span>
+          <span class="pill"><i class="fa-brands fa-linux"></i> Linux</span>
+          <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="pill"><i class="fa-solid fa-shield-halved"></i> Nmap</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMPÉTENCES ==================== -->
+    <section class="page" id="skills">
+      <div class="wrap">
+        <h2 class="title">Mon <span class="o">Univers</span> technique</h2>
+
+        <div class="univers">
+          <article class="ucard">
+            <div class="ucard-top" style="--c1:#326CE5;--c2:#1b3f8f"><i class="fa-solid fa-cloud"></i></div>
+            <span class="badge">Cloud &amp; orchestration</span>
+            <p>Déploiement d'applications sur des clusters Kubernetes managés et routage du trafic.</p>
+            <div class="chips">
+              <span class="chip k">Kubernetes</span><span class="chip k">Google Cloud / GKE</span><span class="chip">Traefik</span><span class="chip">cAdvisor</span>
+            </div>
+          </article>
+
+          <article class="ucard">
+            <div class="ucard-top" style="--c1:#F28B0C;--c2:#a6520a"><i class="fa-solid fa-gears"></i></div>
+            <span class="badge">DevOps &amp; automatisation</span>
+            <p>Conteneurisation, intégration et déploiement continus, automatisation des configurations.</p>
+            <div class="chips">
+              <span class="chip k">Docker</span><span class="chip k">Git / GitHub</span><span class="chip">Ansible</span><span class="chip">Jenkins</span><span class="chip">CI/CD</span>
+            </div>
+          </article>
+
+          <article class="ucard">
+            <div class="ucard-top" style="--c1:#7B2FF7;--c2:#4b1aa3"><i class="fa-solid fa-shield-halved"></i></div>
+            <span class="badge">Réseau &amp; sécurité</span>
+            <p>Bases réseau, VPN et audit de sécurité offensive sur des machines Linux.</p>
+            <div class="chips">
+              <span class="chip k">Adressage IP</span><span class="chip">OpenVPN</span><span class="chip">Nmap</span><span class="chip">ffuf</span><span class="chip">Pentest</span>
+            </div>
+          </article>
+
+          <article class="ucard">
+            <div class="ucard-top" style="--c1:#2a9d8f;--c2:#1a5f57"><i class="fa-solid fa-server"></i></div>
+            <span class="badge">Systèmes</span>
+            <p>Administration de systèmes Linux et environnements de développement sous WSL.</p>
+            <div class="chips">
+              <span class="chip k">Linux / Ubuntu</span><span class="chip">WSL</span><span class="chip">Windows</span>
+            </div>
+          </article>
+
+          <article class="ucard">
+            <div class="ucard-top" style="--c1:#3776AB;--c2:#1f4566"><i class="fa-solid fa-code"></i></div>
+            <span class="badge">Langages</span>
+            <p>Scripts d'automatisation et développement d'applications.</p>
+            <div class="chips">
+              <span class="chip k">Python</span><span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">Rust</span>
+            </div>
+          </article>
+
+          <article class="ucard">
+            <div class="ucard-top" style="--c1:#e05d44;--c2:#8f3424"><i class="fa-solid fa-database"></i></div>
+            <span class="badge">Web &amp; bases de données</span>
+            <p>Interfaces web et applications connectées à des bases de données.</p>
+            <div class="chips">
+              <span class="chip k">HTML/CSS</span><span class="chip k">Tailwind CSS</span><span class="chip">React</span><span class="chip">WordPress</span><span class="chip">SQLite3</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="legend">
           <span class="k">Maîtrisé en projet</span>
           <span>En progression</span>
         </div>
       </div>
     </section>
 
-    <!--------------------------- PARCOURS ------------------------->
-
-    <section class="block alt" id="parcours">
+    <!-- ==================== MES RÉALISATIONS ==================== -->
+    <section class="page" id="projects">
       <div class="wrap">
-        <div class="rv head">
-          <span class="kicker">Mon parcours</span>
-          <h2>Expérience &amp; <span class="o">formation</span></h2>
-        </div>
+        <h2 class="title">Mes <span class="o">Réalisations</span></h2>
 
-        <div class="cols">
-          <!-- Expérience -->
-          <div>
-            <h3 class="col-t">Expérience</h3>
-            <div class="tl">
-              <article class="rv card ev">
-                <span class="date">Juin 2026 · 1 mois</span>
-                <h3>Guide bénévole</h3>
-                <div class="org">VivaTech · Paris</div>
-                <ul>
-                  <li><strong>Accueil et orientation</strong> des visiteurs sur le salon</li>
-                  <li>Identification des exposants selon les besoins des visiteurs et redirection vers les stands correspondants</li>
-                  <li>Maîtrise de la carte du salon pour optimiser les parcours visiteurs</li>
-                </ul>
-              </article>
-
-              <article class="rv card ev">
-                <span class="date">Juin - août 2024 · 2 mois</span>
-                <h3>Employé libre-service</h3>
-                <div class="org">Sweet Bazar Company · Paris</div>
-                <ul>
-                  <li>Accueil et installation des clients</li>
-                  <li>Prise de commandes et service en table</li>
-                  <li><strong>Encaissement et gestion de la caisse</strong></li>
-                  <li>Conseil client et vente de produits</li>
-                </ul>
-              </article>
-
-              <article class="rv card ev">
-                <span class="date">Oct. 2021 - janv. 2022 · 3 mois</span>
-                <h3>Développeur WordPress</h3>
-                <div class="org">Coursier Médical · Abidjan</div>
-                <ul>
-                  <li>Intégration et mise en page de contenus (pages coursiers, facturation)</li>
-                  <li>Optimisation des performances : <strong>temps de chargement réduit de 30 %</strong> (compression d'images, mise en cache)</li>
-                  <li>Analyse des besoins clients et résolution des demandes techniques avant mise en production</li>
-                  <li>Maintenance évolutive et corrective du site</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!------------------------------ Formation ---------------------------->
-          <div>
-            <h3 class="col-t">Formation</h3>
-            <div class="tl">
-              <article class="rv card ev">
-                <span class="date">2026 - oct. 2029</span>
-                <h3>MSc Pro Cloud <span class="now">En cours</span></h3>
-                <div class="org">Epitech Paris</div>
-                <p>Titre <strong>Architecte de Systèmes d'Information (RNCP niveau 7, Bac +5)</strong>. Parcours Pré-MSc → MSc Pro Cloud.</p>
-              </article>
-
-              <article class="rv card ev">
-                <span class="date">2024 - 2025</span>
-                <h3>Bachelor 1ère et 2e année</h3>
-                <div class="org">EDC Paris Business School</div>
-                <p>Gestion de projet, entrepreneuriat, communication professionnelle.</p>
-              </article>
-
-              <article class="rv card ev">
-                <span class="date">Déc. 2019 - août 2021</span>
-                <h3>BTS informatique</h3>
-                <div class="org">École de Spécialité MultiMédia · Abidjan</div>
-                <p>Développement logiciel et web, réseaux, systèmes, multimédia.</p>
-              </article>
-
-              <article class="rv card ev">
-                <span class="date">2018 - 2019</span>
-                <h3>Baccalauréat scientifique</h3>
-                <div class="org">Collège Sainte Foi · Abidjan</div>
-                <p>Enseignement général, filière scientifique.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-------------------------- PROJETS ---------------------------->
-
-    <section class="block" id="projects">
-      <div class="wrap">
-        <div class="rv head">
-          <span class="kicker">Mes réalisations</span>
-          <h2>Projets <span class="o">récents</span></h2>
+        <div class="filters">
+          <button class="filter on" data-filter="all">Tout</button>
+          <button class="filter" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button class="filter" data-filter="secu">Sécurité</button>
+          <button class="filter" data-filter="web">Web &amp; Backend</button>
         </div>
 
         <div class="projects">
-          <article class="rv card proj">
-            <span class="n">01</span>
-            <div class="meta"><span class="type">Cloud</span>Juin 2026 · 2 semaines</div>
-            <h3>Orchestration de conteneurs</h3>
-            <p>
-              Déploiement d'une <strong>application multi-services (5 services)</strong> sur un <strong>cluster Kubernetes multi-nœuds (GKE)</strong>.
-              Routage et gestion des flux entrants avec Traefik ; supervision avec cAdvisor.
-            </p>
-            <div class="chips">
-              <span class="chip">Kubernetes</span>
-              <span class="chip">GKE</span>
-              <span class="chip">Traefik</span>
-              <span class="chip">cAdvisor</span>
+          <article class="proj" data-cat="cloud">
+            <div class="proj-top" style="--c1:#326CE5;--c2:#1b3f8f"><i class="fa-solid fa-dharmachakra"></i></div>
+            <div class="proj-body">
+              <span class="badge">Cloud · Juin 2026</span>
+              <h3>Orchestration de conteneurs</h3>
+              <p>Déploiement d'une <strong>application multi-services (5 services)</strong> sur un <strong>cluster Kubernetes multi-nœuds (GKE)</strong>. Routage avec Traefik ; supervision avec cAdvisor.</p>
+              <div class="chips"><span class="chip">Kubernetes</span><span class="chip">GKE</span><span class="chip">Traefik</span><span class="chip">cAdvisor</span></div>
             </div>
           </article>
 
-          <article class="rv card proj">
-            <span class="n">02</span>
-            <div class="meta"><span class="type">Sécurité</span>Août 2026 · 2 semaines</div>
-            <h3>Audit de sécurité offensive (Pentest) sur Linux</h3>
-            <p>
-              Exploitation de vulnérabilités système et réseau (<strong>injection de commande, SUID, cron, secrets exposés</strong>) avec Nmap et ffuf.
-              Analyse des surfaces d'attaque ; documentation des failles identifiées.
-            </p>
-            <div class="chips">
-              <span class="chip">Linux</span>
-              <span class="chip">Nmap</span>
-              <span class="chip">ffuf</span>
+          <article class="proj" data-cat="secu">
+            <div class="proj-top" style="--c1:#7B2FF7;--c2:#4b1aa3"><i class="fa-solid fa-user-secret"></i></div>
+            <div class="proj-body">
+              <span class="badge">Sécurité · Août 2026</span>
+              <h3>Audit de sécurité offensive sur Linux</h3>
+              <p>Exploitation de vulnérabilités (<strong>injection de commande, SUID, cron, secrets exposés</strong>) avec Nmap et ffuf. Documentation des failles identifiées.</p>
+              <div class="chips"><span class="chip">Linux</span><span class="chip">Nmap</span><span class="chip">ffuf</span></div>
             </div>
           </article>
 
-          <article class="rv card proj">
-            <span class="n">03</span>
-            <div class="meta"><span class="type">Backend</span>Janv. – mars 2026 · 3 mois</div>
-            <h3>Application de chat temps réel</h3>
-            <p>
-              Architecture backend et flux de communication <strong>temps réel (WebSocket)</strong> :
-              messagerie instantanée, statuts online/offline, indicateur « en train d'écrire ».
-            </p>
-            <div class="chips">
-              <span class="chip">WebSocket</span>
-              <span class="chip">MongoDB</span>
-              <span class="chip">PostgreSQL</span>
+          <article class="proj" data-cat="web">
+            <div class="proj-top" style="--c1:#2a9d8f;--c2:#1a5f57"><i class="fa-solid fa-comments"></i></div>
+            <div class="proj-body">
+              <span class="badge">Backend · Janv. - Mars 2026</span>
+              <h3>Application de chat temps réel</h3>
+              <p>Communication <strong>temps réel (WebSocket)</strong> : messagerie instantanée, statuts online/offline, indicateur « en train d'écrire ».</p>
+              <div class="chips"><span class="chip">WebSocket</span><span class="chip">MongoDB</span><span class="chip">PostgreSQL</span></div>
             </div>
           </article>
 
-          <article class="rv card proj">
-            <span class="n">04</span>
-            <div class="meta"><span class="type">Full stack</span>Nov. 2025 · 1 mois</div>
-            <h3>Plateforme d'offres d'emploi</h3>
-            <p>
-              Développement et déploiement d'une <strong>application web full stack</strong>, de la conception à la mise en production :
-              offres, comptes utilisateurs/admin, tableau de bord.
-            </p>
-            <div class="chips">
-              <span class="chip">SQLite3</span>
-              <span class="chip">phpMyAdmin</span>
+          <article class="proj" data-cat="web">
+            <div class="proj-top" style="--c1:#e05d44;--c2:#8f3424"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="proj-body">
+              <span class="badge">Full stack · Nov. 2025</span>
+              <h3>Plateforme d'offres d'emploi</h3>
+              <p>Application <strong>web full stack</strong>, de la conception à la mise en production : offres, comptes utilisateurs/admin, tableau de bord.</p>
+              <div class="chips"><span class="chip">SQLite3</span><span class="chip">phpMyAdmin</span></div>
             </div>
           </article>
 
-          <article class="rv card proj">
-            <span class="n">05</span>
-            <div class="meta"><span class="type">DevOps</span>Projet personnel</div>
-            <h3>Pipeline CI/CD Docker &amp; Jenkins</h3>
-            <p>Mise en place d'une chaîne d'<strong>intégration et de déploiement continus</strong> sur Ubuntu (WSL).</p>
-            <div class="chips">
-              <span class="chip">Docker</span>
-              <span class="chip">Jenkins</span>
-              <span class="chip">Ubuntu</span>
+          <article class="proj" data-cat="cloud">
+            <div class="proj-top" style="--c1:#F28B0C;--c2:#a6520a"><i class="fa-brands fa-docker"></i></div>
+            <div class="proj-body">
+              <span class="badge">DevOps · Projet personnel</span>
+              <h3>Pipeline CI/CD Docker &amp; Jenkins</h3>
+              <p>Chaîne d'<strong>intégration et de déploiement continus</strong> sur Ubuntu (WSL).</p>
+              <div class="chips"><span class="chip">Docker</span><span class="chip">Jenkins</span><span class="chip">Ubuntu</span></div>
             </div>
           </article>
 
-          <article class="rv card proj">
-            <span class="n">06</span>
-            <div class="meta"><span class="type">Automatisation</span>Projet personnel</div>
-            <h3>Scripts Python &amp; automatisation</h3>
-            <p>Scripts de <strong>traitement de données</strong> et d'interfaçage avec des bases de données.</p>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">SQL</span>
+          <article class="proj" data-cat="cloud">
+            <div class="proj-top" style="--c1:#3776AB;--c2:#1f4566"><i class="fa-brands fa-python"></i></div>
+            <div class="proj-body">
+              <span class="badge">Automatisation · Projet personnel</span>
+              <h3>Scripts Python &amp; automatisation</h3>
+              <p>Scripts de <strong>traitement de données</strong> et d'interfaçage avec des bases de données.</p>
+              <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span></div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!------------------------------- SOFT SKILLS ------------------------------->
-
-    <section class="block alt" id="soft">
+    <!-- ==================== SOFT SKILLS ==================== -->
+    <section class="page" id="soft">
       <div class="wrap">
-        <div class="rv head">
-          <span class="kicker">Au-delà de la technique</span>
-          <h2>Soft skills &amp; <span class="o">loisirs</span></h2>
-        </div>
+        <h2 class="title">Soft skills &amp; <span class="o">Loisirs</span></h2>
 
         <div class="trio">
-          <div class="rv card panel">
-            <h3>Soft skills</h3>
+          <div class="card panel">
+            <h3><i class="fa-solid fa-handshake"></i> Soft skills</h3>
             <ul class="list">
               <li>Adaptabilité</li>
               <li>Autonomie</li>
@@ -454,8 +427,8 @@
             </ul>
           </div>
 
-          <div class="rv card panel">
-            <h3>Langues</h3>
+          <div class="card panel">
+            <h3><i class="fa-solid fa-language"></i> Langues</h3>
             <div class="lang">
               <div>
                 <div class="t"><span>Français</span><b>C1</b></div>
@@ -468,8 +441,8 @@
             </div>
           </div>
 
-          <div class="rv card panel">
-            <h3>Loisirs</h3>
+          <div class="card panel">
+            <h3><i class="fa-solid fa-futbol"></i> Loisirs</h3>
             <ul class="list">
               <li>Football</li>
               <li>Fitness</li>
@@ -481,67 +454,36 @@
     </section>
 
     <!-- ==================== CONTACT ==================== -->
-    <section class="block" id="contact">
+    <section class="page" id="contact">
       <div class="wrap">
-        <div class="rv head">
-          <span class="kicker">Contact</span>
-          <h2>Travaillons <span class="o">ensemble</span></h2>
-        </div>
+        <h2 class="title">Entrez en <span class="o">Contact</span></h2>
 
         <div class="contact">
-          <div class="rv card info">
-            <p>
-              Vous proposez une <strong>alternance DevOps, cloud ou SysAdmin</strong> à partir de janvier 2027 ?
-              Écrivez-moi, je réponds rapidement.
-            </p>
-
-            <div class="row">
-              <span class="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m22 6-10 7L2 6"/>
-                </svg>
-              </span>
-              <div><small>Email</small><span id="mail">ladji.karamoko@epitech.eu</span></div>
-              <button class="copy" id="copy-mail" data-target="mail">Copier</button>
+          <div class="info">
+            <div>
+              <small>Email</small>
+              <a href="mailto:ladji.karamoko@epitech.eu">ladji.karamoko@epitech.eu</a>
             </div>
-
-            <div class="row">
-              <span class="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
-                </svg>
-              </span>
-              <div><small>Téléphone</small><span id="tel">+33 6 95 96 90 22</span></div>
-              <button class="copy" id="copy-tel" data-target="tel">Copier</button>
+            <div>
+              <small>Téléphone</small>
+              <a href="tel:+33695969022">+33 6 95 96 90 22</a>
             </div>
-
-            <div class="row">
-              <span class="ic">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/>
-                </svg>
-              </span>
-              <div>
-                <small>LinkedIn</small>
-                <a href="https://www.linkedin.com/in/ladjikaramokoa30532319" target="_blank" rel="noopener">Ladji Karamoko ↗</a>
+            <div>
+              <small>Localisation</small>
+              <span>Aubervilliers (93300), Île-de-France</span>
+            </div>
+            <div>
+              <small>Réseaux</small>
+              <div class="socials">
+                <a href="https://www.linkedin.com/in/ladjikaramokoa30532319" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/karmokolassina22" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ladji.karamoko@epitech.eu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
               </div>
-            </div>
-
-            <div class="row">
-              <span class="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/>
-                  <circle cx="12" cy="10" r="2.5"/>
-                </svg>
-              </span>
-              <div><small>Localisation</small><span>Aubervilliers (93300), Île-de-France</span></div>
             </div>
           </div>
 
-          <!---------------------------------- Formulaire Netlify Forms ------------------------>
-
-          <form class="rv card" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <!-- Formulaire Netlify Forms -->
+          <form class="cform" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
             <input type="hidden" name="form-name" value="contact">
 
             <p class="hp">
@@ -550,38 +492,23 @@
             </p>
 
             <div>
-              <label for="f-name">Nom complet *</label>
-              <input id="f-name" name="nom" required placeholder="Jean Dupont" autocomplete="name">
+              <label for="f-name">Nom</label>
+              <input id="f-name" name="nom" required placeholder="Votre nom" autocomplete="name">
             </div>
 
             <div>
-              <label for="f-company">Entreprise</label>
-              <input id="f-company" name="entreprise" placeholder="Nom de l'entreprise" autocomplete="organization">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" required placeholder="vous@exemple.com" autocomplete="email">
             </div>
 
             <div>
-              <label for="f-email">Email *</label>
-              <input id="f-email" name="email" type="email" required placeholder="vous@entreprise.fr" autocomplete="email">
-            </div>
-
-            <div>
-              <label for="f-subject">Objet</label>
-              <select id="f-subject" name="objet">
-                <option>Proposition d'alternance</option>
-                <option>Demande d'entretien</option>
-                <option>Question sur un projet</option>
-                <option>Autre</option>
-              </select>
-            </div>
-
-            <div class="full">
-              <label for="f-msg">Message *</label>
-              <textarea id="f-msg" name="message" required placeholder="Bonjour Ladji, ..."></textarea>
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" required placeholder="Parlez-moi de votre projet"></textarea>
             </div>
 
             <div class="form-foot">
-              <p id="form-status" role="status">Les champs marqués * sont obligatoires.</p>
-              <button class="btn o" type="submit">Envoyer le message →</button>
+              <button class="btn o" type="submit">Envoyer</button>
+              <p id="form-status" role="status"></p>
             </div>
           </form>
         </div>
@@ -590,15 +517,10 @@
 
   </main>
 
-  <button class="totop" id="totop" aria-label="Revenir en haut">↑</button>
-
-  <!----------------------- FOOTER ------------------------>
-
+  <!-- ==================== FOOTER ==================== -->
   <footer>
-    <div class="wrap">
-      <span>© 2026 Ladji Karamoko - Tous droits réservés.</span>
-      <span>Aubervilliers · Abidjan</span>
-    </div>
+    <span>© 2026 Ladji Karamoko — Tous droits réservés.</span>
+    <span>Aubervilliers · Abidjan</span>
   </footer>
 
   <script src="javascript.js"></script>
