@@ -47,8 +47,6 @@ Aucun framework ni étape de build : le site fonctionne tel quel.
 ## Structure du projet
 
 ```
-├── .github/workflows/
-│   └── deploy.yml           # Publication automatique sur Netlify à chaque push
 ├── image/
 │   └── ladji.jpeg           # Photo de profil
 ├── CV-LADJI-KARAMOKO.pdf    # CV téléchargeable depuis le site
@@ -66,18 +64,21 @@ Ouvrir `index.html` dans un navigateur, ou utiliser l'extension **Live Server** 
 
 Le site est hébergé sur **Netlify** : https://ladji.netlify.app
 
-La publication est **automatique** : à chaque `git push` sur la branche `main`, le workflow GitHub Actions [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) envoie le site sur Netlify avec la CLI Netlify. Aucune étape de build : les fichiers sont publiés tels quels.
+La publication est **automatique** : un seul `git push` envoie le code à la fois sur le dépôt Epitech et sur un dépôt miroir de mon compte GitHub personnel. Netlify est relié à ce dépôt miroir : il récupère chaque push sur `main` et met le site en ligne. Aucune étape de build : les fichiers sont publiés tels quels.
 
-L'organisation GitHub d'Epitech n'autorise pas l'installation de l'application Netlify : c'est pour cela que le déploiement passe par GitHub Actions plutôt que par la liaison directe de Netlify.
+Pourquoi un miroir : l'organisation GitHub d'Epitech n'autorise ni l'installation de l'application Netlify, ni l'exécution de GitHub Actions. Netlify ne peut donc pas être relié directement au dépôt Epitech.
 
-Secrets du dépôt utilisés par le workflow (**Settings → Secrets and variables → Actions**) :
+Configuration du double push (une seule fois) :
 
-| Secret               | Contenu                                                 |
-| -------------------- | ------------------------------------------------------- |
-| `NETLIFY_AUTH_TOKEN` | Jeton d'accès personnel Netlify                         |
-| `NETLIFY_SITE_ID`    | Identifiant du site (Project configuration → Project ID) |
+```bash
+git remote set-url --add --push origin git@github.com:EpitechMscProPromo2029/T-ENT-500-PAR-5-1-portfolio-21.git
+git remote set-url --add --push origin git@github.com:karmokolassina22/portfolio.git
+git remote -v   # doit afficher les deux adresses en (push)
+```
 
-Le suivi des déploiements se fait dans l'onglet **Actions** du dépôt GitHub et dans l'onglet **Deploys** du site sur Netlify.
+Réglages Netlify (**Deploy settings → Repository**) : dépôt `karmokolassina22/portfolio`, branche `main`, build command vide, publish directory `.`.
+
+Le suivi des déploiements se fait dans l'onglet **Deploys** du site sur Netlify.
 
 Netlify a été choisi plutôt que GitHub Pages pour disposer d'une adresse courte et professionnelle, à mettre sur le CV.
 
