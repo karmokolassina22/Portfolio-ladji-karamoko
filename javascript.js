@@ -83,7 +83,7 @@ document.querySelectorAll('.filter').forEach(btn => {
 // ===================== FORMULAIRE (Web3Forms) =====================
 // Clé gratuite à obtenir sur https://web3forms.com : les messages arrivent dans votre boîte mail.
 // Cette clé est faite pour être publique, elle peut rester dans le code.
-const WEB3FORMS_KEY = 'COLLEZ-VOTRE-CLE-ICI';
+const WEB3FORMS_KEY = '508d3493-20b9-4aa2-b926-1ba3b3157465';
 
 (function () {
   const f = document.getElementById('contact-form');
