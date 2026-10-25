@@ -72,11 +72,11 @@ Configuration du double push (une seule fois) :
 
 ```bash
 git remote set-url --add --push origin git@github.com:EpitechMscProPromo2029/T-ENT-500-PAR-5-1-portfolio-21.git
-git remote set-url --add --push origin git@github.com:karmokolassina22/portfolio.git
+git remote set-url --add --push origin git@github.com:karmokolassina22/Portfolio-ladji-karamoko.git
 git remote -v   # doit afficher les deux adresses en (push)
 ```
 
-Réglages Netlify (**Deploy settings → Repository**) : dépôt `karmokolassina22/portfolio`, branche `main`, build command vide, publish directory `.`.
+Réglages Netlify (**Deploy settings → Repository**) : dépôt `karmokolassina22/Portfolio-ladji-karamoko`, branche `main`, build command vide, publish directory `.`.
 
 Le suivi des déploiements se fait dans l'onglet **Deploys** du site sur Netlify.
 
