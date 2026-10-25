@@ -164,6 +164,9 @@ textarea:focus-visible {
   gap: 2px;
   animation: drop 0.25s ease;
 }
+.mnav[hidden] {
+  display: none;
+}
 .mnav a {
   display: block;
   padding: 13px 16px;
